@@ -1,9 +1,11 @@
 import React from 'react';
 
-export default function CounterPage() {
+const LoginPage = () => {
     return (
       <React.Fragment>
-        <h2>Counter</h2>
+        <h2>Login</h2>
       </React.Fragment>
     );
   }
+
+  export default LoginPage;
