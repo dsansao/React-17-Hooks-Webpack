@@ -22,7 +22,7 @@ const CounterHooks = () => {
 
     return (
         <React.Fragment>
-            <h1>Counter Hooks</h1>
+            <h1>Counter</h1>
             <div>
                 <h2>Counter: {count}</h2>
                 <button onClick={handleAdd}>Add</button>
