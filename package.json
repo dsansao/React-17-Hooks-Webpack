@@ -18,6 +18,7 @@
   },
   "scripts": {
     "start": "start npm run start-watch && start yarn dev",
+    "start-prod": "start npm run start-watch && start yarn prod",
     "start-watch": "json-server --watch db/db.json --port 3002",
     "build": "react-scripts build",
     "test": "react-scripts test",
