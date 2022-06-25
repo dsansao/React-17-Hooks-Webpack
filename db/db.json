@@ -1,10 +1,15 @@
 {
-  "users" : [
-	{
-		"login": "admin",
-		"password": "admin"
-	}
-  ],	
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "email": "admin@admin.com",
+      "login": "admin",
+      "password": "admin",
+      "role": "ADMIN",
+      "accessToken": "eyJhbGciOiJIUzI1NiJ9.eyJSb2xlIjoiQWRtaW4iLCJJc3N1ZXIiOiJBZG1pbiIsIlVzZXJuYW1lIjoiQWRtaW4iLCJleHAiOjE2NTYxNTI1NTAsImlhdCI6MTY1NjE1MjU1MH0.eJfhhim7i1y-PNt-ZqEbdmlzt5RYhLGU_gcXy8O3C_k"
+    }
+  ],
   "clients": [
     {
       "id": 1,
@@ -35,7 +40,7 @@
       "first_name": "Bob",
       "last_name": "Doe",
       "email": "bobdoe@abc.com",
-       "gender": "Male",
+      "gender": "Male",
       "status": "Active"
     }
   ]

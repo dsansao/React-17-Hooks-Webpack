@@ -2,10 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import { GoogleAuthProvider } from './services/google-auth-service';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <GoogleAuthProvider>
     <App />
-  </React.StrictMode>,
+  </GoogleAuthProvider>,
   document.getElementById('root')
 );
