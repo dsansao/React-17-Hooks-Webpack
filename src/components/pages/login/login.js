@@ -4,6 +4,8 @@ import Form from 'react-validation/build/form';
 import Input from 'react-validation/build/input';
 import CheckButton from 'react-validation/build/button';
 import AuthService from '../../../services/login-auth-service';
+import LoginButton from './../../buttons/LoginButton';
+import './login.scss';
 
 const required = (value) => {
   if (!value) {
@@ -62,9 +64,18 @@ const Login = () => {
     }
   };
   return (
-    <div className="col-md-12">
+    <div className="login-container col-md-12">
       <div className="card card-container">
         <Form onSubmit={handleLogin} ref={form}>
+                    
+          {message && (
+            <div className="form-group">
+              <div className="alert alert-danger" role="alert">
+                {message}
+              </div>      
+            </div>
+          )}          
+
           <div className="form-group">
             <label htmlFor="username">Username</label>
             <Input
@@ -87,22 +98,16 @@ const Login = () => {
               validations={[required]}
             />
           </div>
-          <div className="form-group">
+          <div className="button-container form-group">
             <button className="btn btn-primary btn-block" disabled={loading}>
               {loading && (
                 <span className="spinner-border spinner-border-sm"></span>
               )}
               <span>Login</span>
             </button>
+            <LoginButton className="login-google-button"/>
           </div>
-          {message && (
-            <div className="form-group">
-              <div className="alert alert-danger" role="alert">
-                {message}
-              </div>
-            </div>
-          )}
-          <CheckButton style={{ display: "none" }} ref={checkBtn} />
+          <CheckButton style={{ display: "none" }} ref={checkBtn} /> 
         </Form>
       </div>
     </div>

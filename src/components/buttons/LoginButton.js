@@ -1,12 +1,12 @@
 import React from 'react';
 import { useGoogleAuth } from '../../services/google-auth-service';
 
-const LoginButton = () => {
+const LoginButton = ({ className }) => {
 
     const { signIn } = useGoogleAuth();
 
     return (
-        <button onClick={signIn}>Login</button>
+        <button className={`${className} btn btn-primary btn-block`} onClick={signIn}>Login</button>
       );
 };
 

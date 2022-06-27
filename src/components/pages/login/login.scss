@@ -1,0 +1,23 @@
+.login-container {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100vh;
+
+    .card-container {
+        width: 500px;
+        height: 400px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 10px;
+
+        .login-google-button {
+            margin-left: 10px;
+        }
+    }
+}
