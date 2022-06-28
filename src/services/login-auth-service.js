@@ -20,13 +20,13 @@ const login = (username, password) => {
   return axios
     .get(API_URL + "users", { params })
     .then((response) => {
-      if (response.data[0] && response.data[0].accessToken) {
-        localStorage.setItem("loggedUser", JSON.stringify(response.data[0]));
+      if (response.data && response.data.accessToken) {
+        localStorage.setItem("loggedUser", JSON.stringify(response.data));
       } else {
         throw Error("User not found!");
       }
-      console.log('user', response.data[0]);
-      return response.data[0];
+      console.log('user', response.data);
+      return response.data;
     });
 };
 

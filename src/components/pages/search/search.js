@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useContext } from 'react';
-import { ProductContext } from "../main.js";
+import { ProductContext } from "../productList/productList";
 const axios = require('axios').default;
 
 function Search({onClose, show}) {
@@ -8,7 +8,7 @@ function Search({onClose, show}) {
     const [ productList, setProductList ] = useContext(ProductContext);
     const [ searchText, setSearchText ] = useState("");
 
-    const filterProducts = (productList) => {     
+    const filterProducts = () => {     
         return productList.filter(product => {
             return product.isActive === "true" && 
             (   product.tags.includes(searchText.toLowerCase()) ||
@@ -16,25 +16,12 @@ function Search({onClose, show}) {
             );
         });
     }
-
-    const getProducts = () => {     
-
-        axios.get('http://localhost:3035/')
-            .then(function (response) {
-                console.log(response);
-                let productList = filterProducts(response.data);
-                setProductList(productList);
-            })
-            .catch(function (error) {
-                console.log(error);
-            }); 
-    }
-
+    
     const onSearch = e => {
         let searchText = e.target.value;
         setSearchText(searchText);
         if (searchText && searchText.length >= 3) {
-            getProducts();
+            filterProducts();
         } else {
             setProductList([]);
         }

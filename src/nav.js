@@ -15,7 +15,7 @@ const Nav = () => {
                         <Link className="nav-bar-container-item-counter" to="/counter">Counter</Link>
                     </li>
                     <li className="nav-bar-container-item">
-                        <Link className="nav-bar-container-item-product-list" to="/product">Product List</Link>
+                        <Link className="nav-bar-container-item-product-list" to="/product-list">Product List</Link>
                     </li>
                 </ul>
             </div>

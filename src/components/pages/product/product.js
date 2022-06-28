@@ -1,19 +1,41 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import "./product.scss"
 
-function Product({product}) {
-	return(
-		<div className="product-container">			
-			<h2 className="product-title">{product.name}</h2>
-			<div className="product-about-img-container">
-				<p className="product-about">{product.about}</p>
-				<img className="product-img" alt={product.name} src={product.picture} />				
-			</div>
-			<div className="product-price-add-container">
-				<span className="product-price">${product.price}</span>
-				<span className="product-add">Add to Cart</span>
-			</div>
-		</div>
-	);
+const Product = ({product}) => {
+
+    //console.log('product', product);
+    const [isShow, setIsShow] = useState(true);
+
+    useEffect(() => {        
+        if (product.Price === product["Retail Price"]) {
+            setIsShow(false);
+        }
+    }, [product]);
+
+    return (
+
+        <div className="container-product-container">
+            <img className="image-product-container" src={product.ThumbnailURL} alt={product.Name}/>
+            <div className="container-name-prices">
+                <div className="product" id="product">{product.Name}</div>                
+                <div className="container-prices">
+                    <div className="price-normal">${product.Price}</div>
+                    {isShow ?
+                        <div className="price-retail">${product["Retail Price"]}</div>
+                        :
+                        <></>
+                    }
+                </div>
+                
+            </div>
+            <div className="view-details-container">
+                <button className="view-details-btn" id="viewDetail">View Detail</button>
+            </div>
+           
+        </div>
+        
+    );
+
 }
 
-export default Product;
+export default Product; 

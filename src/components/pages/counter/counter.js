@@ -25,7 +25,7 @@ const Counter = () => {
         <React.Fragment>
             <div className="counter-container">
                 <div className="counter-card">
-                    <span className="counter-card-title">Counter</span>
+                    <h3 className="counter-card-title">Counter</h3>
                     <div className="counter-card-items-container">
                         <span className="counter-card-subtitle">Quantity: {count}</span>
                         <button className="btn btn-primary btn-block counter-card-add" onClick={handleAdd}>Add</button>
