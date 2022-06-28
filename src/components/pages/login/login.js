@@ -45,7 +45,7 @@ const Login = () => {
     if (checkBtn.current.context._errors.length === 0) {
       AuthService.login(username, password).then(
         () => {
-          navigate("/counter");
+          navigate("/home");
           window.location.reload();
         },
         (error) => {

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import "./counter.scss"
 
 const Counter = () => {
 
@@ -22,11 +23,15 @@ const Counter = () => {
 
     return (
         <React.Fragment>
-            <h1>Counter</h1>
-            <div>
-                <h2>Counter: {count}</h2>
-                <button onClick={handleAdd}>Add</button>
-                <button onClick={handleRemove}>Remove</button>
+            <div className="counter-container">
+                <div className="counter-card">
+                    <span className="counter-card-title">Counter</span>
+                    <div className="counter-card-items-container">
+                        <span className="counter-card-subtitle">Quantity: {count}</span>
+                        <button className="btn btn-primary btn-block counter-card-add" onClick={handleAdd}>Add</button>
+                        <button className="btn btn-primary btn-block counter-card-remove" onClick={handleRemove}>Remove</button>
+                    </div>
+                </div>
             </div>
         </React.Fragment>
     )
