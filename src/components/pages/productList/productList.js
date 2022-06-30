@@ -3,11 +3,12 @@ import axios from "axios";
 import Product from './../product/product';
 import Search from './../search/search';
 
-export const ProductContext = createContext();
+export const ProductFilteredContext = createContext();
 
 const ProductList= () => {
 
-	const [ productList, setProductList ] = useState();
+	const [ productList, setProductList ] = useState([]);
+	const [ productFilteredList, setProductFilteredList ] = useState([]);
 
 	useEffect(() => {
 
@@ -26,14 +27,15 @@ const ProductList= () => {
 
 	return(
 		<div className="product-list-container">
-			<ProductContext.Provider value={[ productList, setProductList ]}>
-				<Search/>	
+			<ProductFilteredContext.Provider value={[ productFilteredList, setProductFilteredList ]}>
+				<Search list={productList}/>	
 				<div className="product-list-row">
-				{
-					productList && productList.map( product => <Product key={product.ProductID} product={product}/> )
+				{ productFilteredList.length > 0 ?
+					productFilteredList && productFilteredList.map( product => <Product key={product.ProductID} product={product}/> ) :
+					productList && productList.map( product => <Product key={product.ProductID} product={product}/> )					
 				}
 				</div>
-			</ProductContext.Provider>		
+			</ProductFilteredContext.Provider>		
 		</div>
 	);
 }

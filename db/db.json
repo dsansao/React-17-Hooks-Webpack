@@ -26,7 +26,8 @@
       "RatingAvg": 4.2,
       "RatingCount": 8,
       "Stock": 21,
-      "DateCreated": "2018-03-03 17:41:13"
+      "DateCreated": "2018-03-03 17:41:13",
+      "isActive": true
     },
     {
       "ProductID": 7615,
@@ -44,7 +45,8 @@
       "RatingAvg": 4.5,
       "RatingCount": 10,
       "Stock": 8,
-      "DateCreated": "2018-03-20 22:24:21"
+      "DateCreated": "2018-03-20 22:24:21",
+      "isActive": true
     },
     {
       "ProductID": 8100,
@@ -62,7 +64,8 @@
       "RatingAvg": 4.2,
       "RatingCount": 11,
       "Stock": 9,
-      "DateCreated": "2018-03-16 21:55:28"
+      "DateCreated": "2018-03-16 21:55:28",
+      "isActive": true
     },
     {
       "ProductID": 6489,
@@ -80,7 +83,8 @@
       "RatingAvg": 4.1,
       "RatingCount": 4,
       "Stock": 19,
-      "DateCreated": "2018-02-28 23:37:28"
+      "DateCreated": "2018-02-28 23:37:28",
+      "isActive": true
     },
     {
       "ProductID": 7732,
@@ -98,7 +102,8 @@
       "RatingAvg": 4.4,
       "RatingCount": 22,
       "Stock": 3,
-      "DateCreated": "2018-03-01 20:18:20"
+      "DateCreated": "2018-03-01 20:18:20",
+      "isActive": true
     },
     {
       "ProductID": 7609,
@@ -116,7 +121,8 @@
       "RatingAvg": 3.9,
       "RatingCount": 5,
       "Stock": 2,
-      "DateCreated": "2018-03-20 22:15:34"
+      "DateCreated": "2018-03-20 22:15:34",
+      "isActive": true
     },
     {
       "ProductID": 7675,
@@ -134,7 +140,8 @@
       "Rating Avg": 4.8,
       "Rating Count": 2,
       "Stock": 20,
-      "DateCreated": "2018-03-19 20:53:04"
+      "DateCreated": "2018-03-19 20:53:04",
+      "isActive": true
     },
     {
       "ProductID": 7463,
@@ -152,7 +159,8 @@
       "Rating Avg": 3.8,
       "Rating Count": 9,
       "Stock": 0,
-      "DateCreated": "2018-03-01 19:59:05"
+      "DateCreated": "2018-03-01 19:59:05",
+      "isActive": true
     },
     {
       "ProductID": 7677,
@@ -170,7 +178,8 @@
       "RatingAvg": 5,
       "RatingCount": 1,
       "Stock": 8,
-      "DateCreated": "2019-01-31 16:24:09"
+      "DateCreated": "2019-01-31 16:24:09",
+      "isActive": false
     },
     {
       "ProductID": 8099,
@@ -188,7 +197,8 @@
       "Rating Avg": 4,
       "Rating Count": 1,
       "Stock": 18,
-      "DateCreated": "2018-02-28 19:03:26"
+      "DateCreated": "2018-02-28 19:03:26",
+      "isActive": true
     }
   ]
 }

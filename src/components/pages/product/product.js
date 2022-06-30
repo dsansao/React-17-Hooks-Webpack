@@ -2,8 +2,7 @@ import React, {useState, useEffect} from 'react';
 import "./product.scss"
 
 const Product = ({product}) => {
-
-    //console.log('product', product);
+    
     const [isShow, setIsShow] = useState(true);
 
     useEffect(() => {        
@@ -29,7 +28,7 @@ const Product = ({product}) => {
                 
             </div>
             <div className="view-details-container">
-                <button className="view-details-btn" id="viewDetail">View Detail</button>
+                <button className="view-details-btn" id="viewDetail">Detail</button>
             </div>
            
         </div>

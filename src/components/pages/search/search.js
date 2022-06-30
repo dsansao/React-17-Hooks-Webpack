@@ -1,44 +1,34 @@
-import React, { useState } from 'react';
-import { useContext } from 'react';
-import { ProductContext } from "../productList/productList";
+import React, { useState, useContext, useEffect, useRef } from 'react';
+import { ProductFilteredContext } from "../productList/productList";
 const axios = require('axios').default;
 
-function Search({onClose, show}) {
+function Search({list, onClose, show}) {
 
-    const [ productList, setProductList ] = useContext(ProductContext);
+    const [ productFilteredList, setProductFilteredList ] = useContext(ProductFilteredContext);
     const [ searchText, setSearchText ] = useState("");
 
     const filterProducts = () => {     
-        return productList.filter(product => {
-            return product.isActive === "true" && 
-            (   product.tags.includes(searchText.toLowerCase()) ||
-                product.name.toUpperCase().includes(searchText.toUpperCase())
-            );
+        return list.filter(product => {
+            return product.isActive === true && 
+            ( product.Name.toUpperCase().includes(searchText.toUpperCase()));
         });
     }
     
     const onSearch = e => {
         let searchText = e.target.value;
         setSearchText(searchText);
-        if (searchText && searchText.length >= 3) {
-            filterProducts();
+        if (searchText && searchText.length >= 1) {
+            setProductFilteredList(filterProducts());
         } else {
-            setProductList([]);
+            setProductFilteredList([]);
         }
     }
 
-    const onClick = e => {
-        setSearchText('');
-        onClose(e);
-    }
-
 	return(
-        <React.Fragment>
+        <React.Fragment>            
             <div className={(show ? "showing " : "") + "search-container"}>
+                <h4 className="filter-products-label">Filter products: </h4>
                 <input value={searchText} type="text" onChange={onSearch}/>
-                <a onClick={onClick} href="#">
-                    <i className="material-icons close">close</i>
-                </a>
             </div>
         </React.Fragment>
 	);
