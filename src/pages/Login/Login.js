@@ -3,8 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import Form from 'react-validation/build/form';
 import Input from 'react-validation/build/input';
 import CheckButton from 'react-validation/build/button';
-import AuthService from '../../../services/login-auth-service';
-import LoginButton from './../../buttons/LoginButton';
+import LoginGoogleButton from './../../components/LoginGoogleButton/LoginGoogleButton';
+import AuthService from './../../services/LoginAuthService';
+
 import './login.scss';
 
 const required = (value) => {
@@ -105,7 +106,7 @@ const Login = () => {
               )}
               <span>Login</span>
             </button>
-            <LoginButton className="login-google-button"/>
+            <LoginGoogleButton className="login-google-button"/>
           </div>
           <CheckButton style={{ display: "none" }} ref={checkBtn} /> 
         </Form>

@@ -1,8 +1,8 @@
 import React, { useState, useContext, useEffect, useRef } from 'react';
-import { ProductFilteredContext } from "../productList/productList";
-const axios = require('axios').default;
+import { ProductFilteredContext } from "./../ProductList";
+import './search.scss'
 
-function Search({list, onClose, show}) {
+function Search({list}) {
 
     const [ productFilteredList, setProductFilteredList ] = useContext(ProductFilteredContext);
     const [ searchText, setSearchText ] = useState("");
@@ -26,8 +26,8 @@ function Search({list, onClose, show}) {
 
 	return(
         <React.Fragment>            
-            <div className={(show ? "showing " : "") + "search-container"}>
-                <h4 className="filter-products-label">Filter products: </h4>
+            <div className="search-container">
+                <h4 className="search-products-label">Filter products: </h4>
                 <input value={searchText} type="text" onChange={onSearch}/>
             </div>
         </React.Fragment>

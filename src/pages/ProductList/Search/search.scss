@@ -1,0 +1,12 @@
+.search-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+    height: fit-content;
+    
+    .search-products-label {
+        margin-right: 10px;
+    }
+}

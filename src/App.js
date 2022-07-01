@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import "bootstrap/dist/css/bootstrap.min.css";
+import AppRoutes from './routers/routers';
 
-import AppRoutes from './routers';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {    
     return (

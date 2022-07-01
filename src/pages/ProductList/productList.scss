@@ -1,0 +1,11 @@
+.product-list-container {
+    overflow: auto;
+    height: calc(100vh - 54px);
+
+    .product-list-row {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        align-self: flex-start;
+    }
+}

@@ -1,7 +1,8 @@
 import React, { createContext, useState, useEffect } from 'react';
 import axios from "axios";
-import Product from './../product/product';
-import Search from './../search/search';
+import Product from './Product/Product';
+import Search from './Search/Search';
+import './productList.scss';
 
 export const ProductFilteredContext = createContext();
 
@@ -16,8 +17,7 @@ const ProductList= () => {
 
 		axios.get(API_URL+'products')
 			.then(function (response) {
-				console.log(response.data);
-				//let productList = filterProducts(response.data);
+				console.log(response.data);				
 				setProductList(response.data);
 			})
 			.catch(function (error) {

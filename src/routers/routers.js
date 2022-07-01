@@ -1,14 +1,14 @@
 import React from 'react';
 import { Route, Routes, Navigate } from "react-router";
 
-import LoginPage from './components/pages/login/login';
-import Counter from './components/pages/counter/counter';
-import Home from './components/pages/home/home';
-import ProductList from './components/pages/productList/productList';
-import Nav from './nav';
-import PrivateRoute from './privateRoute';
-import { useGoogleAuth } from "./services/google-auth-service";
-import AuthService from "./services/login-auth-service";
+import Login from './../pages/Login/Login';
+import Counter from './../pages/Counter/Counter';
+import Home from './../pages/Home/Home';
+import ProductList from './../pages/ProductList/ProductList';
+import Nav from './../components/Nav/Nav';
+import PrivateRoute from './PrivateRoute';
+import { useGoogleAuth } from "./../services/GoogleAuthService";
+import AuthService from "./../services/LoginAuthService";
 
 export default function AppRoutes() {
 
@@ -25,7 +25,7 @@ export default function AppRoutes() {
                 <Route path="/counter" element={< PrivateRoute isSignedIn={ isSignedIn } component={ <Counter/> } />}></Route>
                 <Route path="/home" element={< PrivateRoute isSignedIn={ isSignedIn } component={ <Home/> } />}></Route>
                 <Route path="/product-list" element={< PrivateRoute isSignedIn={ isSignedIn } component={ <ProductList/> } />}></Route>
-                <Route path="/" exact element={<LoginPage />}></Route>
+                <Route path="/" exact element={<Login />}></Route>
                 <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
         </React.Fragment>

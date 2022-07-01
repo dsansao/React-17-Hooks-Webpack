@@ -1,6 +1,6 @@
 import React from 'react';
 import "./home.scss";
-import Red from "../../../red";
+import Red from "./../../components/Red/Red";
 
 const Home = () => {
 

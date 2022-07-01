@@ -1,7 +1,7 @@
 import React from 'react';
-import { useGoogleAuth } from '../../services/google-auth-service';
+import { useGoogleAuth } from './../../services/GoogleAuthService';
 
-const LogoutButton = () => {
+const LogoutGoogleButton = () => {
     const { signOut } = useGoogleAuth();
 
     return (
@@ -9,4 +9,4 @@ const LogoutButton = () => {
       );
 };
 
-export default LogoutButton;
+export default LogoutGoogleButton;

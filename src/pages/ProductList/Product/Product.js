@@ -16,7 +16,7 @@ const Product = ({product}) => {
         <div className="container-product-container">
             <img className="image-product-container" src={product.ThumbnailURL} alt={product.Name}/>
             <div className="container-name-prices">
-                <div className="product" id="product">{product.Name}</div>                
+                <div className="product-name" id="product">{product.Name}</div>                
                 <div className="container-prices">
                     <div className="price-normal">${product.Price}</div>
                     {isShow ?

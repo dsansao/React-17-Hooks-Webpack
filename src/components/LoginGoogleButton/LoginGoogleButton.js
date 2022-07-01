@@ -1,7 +1,7 @@
 import React from 'react';
-import { useGoogleAuth } from '../../services/google-auth-service';
+import { useGoogleAuth } from './../../services/GoogleAuthService';
 
-const LoginButton = ({ className }) => {
+const LoginGoogleButton = ({ className }) => {
 
     const { signIn } = useGoogleAuth();
 
@@ -10,4 +10,4 @@ const LoginButton = ({ className }) => {
       );
 };
 
-export default LoginButton;
+export default LoginGoogleButton;

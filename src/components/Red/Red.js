@@ -1,4 +1,5 @@
 import React from 'react';
+import './red.scss';
 
 const Red = ({ children  }) => {    
 
