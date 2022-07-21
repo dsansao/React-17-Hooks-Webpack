@@ -6,7 +6,7 @@ const LoginGoogleButton = ({ className }) => {
     const { signIn } = useGoogleAuth();
 
     return (
-        <button className={`${className} btn btn-primary btn-block`} onClick={signIn}>Login</button>
+        <button className={`${className} btn btn-primary btn-block`} onClick={signIn}>Login with Google</button>
       );
 };
 

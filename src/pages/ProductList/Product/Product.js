@@ -1,8 +1,10 @@
 import React, {useState, useEffect} from 'react';
+import { useNavigate } from "react-router-dom";
 import "./product.scss"
 
 const Product = ({product}) => {
-    
+
+    const navigate = useNavigate();    
     const [isShow, setIsShow] = useState(true);
 
     useEffect(() => {        
@@ -10,6 +12,11 @@ const Product = ({product}) => {
             setIsShow(false);
         }
     }, [product]);
+
+    const handleClick = (e) => {
+        e.preventDefault();
+        navigate('/product', { state: product });
+    };
 
     return (
 
@@ -28,7 +35,7 @@ const Product = ({product}) => {
                 
             </div>
             <div className="view-details-container">
-                <button className="view-details-btn" id="viewDetail">Detail</button>
+                <button className="view-details-btn" onClick={handleClick} id="viewDetail">Detail</button>
             </div>
            
         </div>

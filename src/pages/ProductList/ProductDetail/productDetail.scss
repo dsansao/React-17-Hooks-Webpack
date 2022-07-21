@@ -1,5 +1,118 @@
 .container-product-detail {
-    .product {
-        
+    display: flex;
+    align-items: center;
+    margin: 200px 100px 0 100px;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .image-product-container {
+        display: flex;
+        width: 20%;
     }
-}
+
+    .container-name-prices {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 80%;
+
+        .container-product-name-description {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 20px;
+
+            .product-name {
+                display: flex;
+                font-size: 22px;
+                color: gray;
+                font-weight: 600;
+            }
+            
+            .product-description {
+                display: flex;
+                width: 800px;
+                font-size: 18px;
+                color: gray;
+            }
+        }
+
+        .container-prices {
+            display: flex;
+    
+            .price-normal {
+                display: flex;
+                font-size: 24px;
+                color: gray;
+            }
+            .price-retail {
+                display: flex;
+                margin-left: 10px;
+                font-size: 20px;
+                text-decoration: line-through;
+                color: gray;
+            }
+        }
+    
+    }
+
+    .product-category-brand-color-container {
+        display: flex;
+        font-size: 16px;
+        color: gray;
+        align-items: center;
+
+        .product-category {
+            display: flex;
+            margin: 10px;
+        }
+        .product-brand {
+            display: flex;
+            margin: 10px;
+        }
+        .product-color {
+            display: flex;
+            margin: 10px;
+        }        
+        .product-stock {
+            display: flex;
+            margin: 10px;
+        }
+        label[class$='-label'] {
+            font-size: 16px;
+            color: gray;
+            font-weight: 600;
+        }
+    }
+
+    .product-star-rating-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .product-rating-count {
+            font-size: 16px;
+            color: gray;
+            margin: 10px;
+        }
+    }
+    
+    .product-btn-container {
+        display: flex;
+        width: 100%;
+        flex-flow: row-reverse;
+        margin-right: 20px;
+    
+        .product-detail-add-cart {
+            height: 40px;
+            background: green;
+            color: white;
+            border-radius: 50px;
+            justify-content: end;
+            border: 1px gray solid;
+            width: 200px;
+            font-size: 20px;
+        }
+    }
+  }

@@ -17,11 +17,11 @@ const ProductList= () => {
 
 		axios.get(API_URL+'products')
 			.then(function (response) {
-				console.log(response.data);				
+				//console.log(response.data);				
 				setProductList(response.data);
 			})
 			.catch(function (error) {
-				console.log(error);
+				//console.log(error);
 			}); 
 	}, []);
 

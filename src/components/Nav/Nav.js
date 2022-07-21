@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import LogoutButton from '../LogoutButton/LogoutButton';
 import './nav.scss';
 
 const Nav = () => {    
@@ -16,6 +17,12 @@ const Nav = () => {
                     </li>
                     <li className="nav-bar-container-item">
                         <Link className="nav-bar-container-item-product-list" to="/product-list">Product List</Link>
+                    </li>
+                    <li className="nav-bar-container-item">
+                        <Link className="nav-bar-container-item-name-list" to="/name-list">Name List</Link>
+                    </li>
+                    <li className="nav-bar-logout-button nav-bar-container-item">
+                        <LogoutButton />
                     </li>
                 </ul>
             </div>

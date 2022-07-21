@@ -25,7 +25,7 @@ const login = (username, password) => {
       } else {
         throw Error("User not found!");
       }
-      console.log('user', response.data);
+      //console.log('user', response.data);
       return response.data;
     });
 };

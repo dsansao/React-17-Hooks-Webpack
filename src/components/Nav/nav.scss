@@ -23,6 +23,12 @@
                         background-color: #111;
                     }
                 }
+
+                &.nav-bar-logout-button {
+                    position: absolute;
+                    right: 150px;                    
+                    margin: 11px;
+                }
             }
         }
     }
