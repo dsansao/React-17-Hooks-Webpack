@@ -1,10 +1,11 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Form from 'react-validation/build/form';
 import Input from 'react-validation/build/input';
 import CheckButton from 'react-validation/build/button';
 import LoginGoogleButton from './../../components/LoginGoogleButton/LoginGoogleButton';
 import AuthService from './../../services/LoginAuthService';
+import { useGoogleAuth } from "./../../services/GoogleAuthService";
 
 import './login.scss';
 
@@ -21,12 +22,20 @@ const required = (value) => {
 const Login = () => {
   
   let navigate = useNavigate();
+  const isSignedIn = useGoogleAuth().isSignedIn || AuthService.isLogged();
   const form = useRef();
   const checkBtn = useRef();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
+
+  useEffect( () => {
+    if (isSignedIn) {
+      navigate("/home");
+      window.location.reload();
+    }
+  }, []);
 
   const onChangeUsername = (e) => {
     const username = e.target.value;
