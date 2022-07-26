@@ -20,7 +20,7 @@ function Search({list}) {
         if (searchText && searchText.length >= 1) {
             setProductFilteredList(filterProducts());
         } else {
-            setProductFilteredList([]);
+            setProductFilteredList(list);
         }
     }
 

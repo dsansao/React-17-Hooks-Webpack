@@ -1,10 +1,10 @@
 import React from 'react';
 import './red.scss';
 
-const Red = ({ children  }) => {    
+const Red = ({ addClass, children }) => {    
 
     return (
-        <span className="red">{ children }</span>
+        <span className={ `${addClass} red`}>{ children }</span>
     );
 }  
 

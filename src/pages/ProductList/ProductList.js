@@ -2,6 +2,7 @@ import React, { createContext, useState, useEffect } from 'react';
 import axios from "axios";
 import Product from './Product/Product';
 import Search from './Search/Search';
+import Red from "./../../components/Red/Red";
 import './productList.scss';
 
 export const ProductFilteredContext = createContext();
@@ -19,6 +20,7 @@ const ProductList= () => {
 			.then(function (response) {
 				//console.log(response.data);				
 				setProductList(response.data);
+				setProductFilteredList(response.data);
 			})
 			.catch(function (error) {
 				//console.log(error);
@@ -30,10 +32,10 @@ const ProductList= () => {
 			<ProductFilteredContext.Provider value={[ productFilteredList, setProductFilteredList ]}>
 				<Search list={productList}/>	
 				<div className="product-list-row">
-				{ productFilteredList.length > 0 ?
-					productFilteredList && productFilteredList.map( product => <Product key={product.ProductID} product={product}/> ) :
-					productList && productList.map( product => <Product key={product.ProductID} product={product}/> )					
-				}
+					{ productFilteredList.length > 0 ?
+						productFilteredList.map( product => <Product key={product.ProductID} product={product}/> ) :
+						<Red addClass="product-list-empty-message">We don´t have products with this name!</Red>
+					}
 				</div>
 			</ProductFilteredContext.Provider>		
 		</div>

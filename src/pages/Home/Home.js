@@ -14,7 +14,7 @@ const Home = () => {
                     <h3 className="home-card-title">Home</h3>
 
                     <p>Some react examples (<Red>Login and Google Login</Red>, <Red>Counter</Red>,  
-                        <Red> Product List with search and Product Detail</Red>), 
+                        <Red> Product List with search and Product Detail</Red>) and <Red>Add/Remove names in a List</Red>, 
                         using <Red>Webpack</Red> and <Red>React Router</Red>
                     </p>
                     <p>

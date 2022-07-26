@@ -8,4 +8,10 @@
         width: 100%;
         align-self: flex-start;
     }
+    
+    .product-list-empty-message {
+        width: 100%;       
+        display: flex;
+        justify-content: center; 
+    }
 }

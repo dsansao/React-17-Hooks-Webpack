@@ -1,4 +1,4 @@
-.container-product-container {
+.product-container {
   display: flex;
   width: calc(50% - 20px);
   padding: 20px;
@@ -9,7 +9,7 @@
   .image-product-container {
     margin: 0 20px;
   }
-  .container-name-prices {
+  .name-prices-container {
     display: flex;
     width: 40%;
     align-items: center;
@@ -27,7 +27,7 @@
       white-space: nowrap;
 
     }
-    .container-prices {
+    .prices-container {
       display: flex;
 
       .price-normal {

@@ -36,19 +36,26 @@ const NameList = () => {
 
 	return(
 		<div className="name-list-container">
-			<input type="text" name="name" value={name} onChange={(e) => setName(e.target.value)}></input>
-			<button className="btn btn-primary btn-block counter-card-add" onClick={handleAdd}>Add</button>
-			
-			<ul>
-			{
-				nameList && nameList.map(item => 
-					<React.Fragment>
-						<li key={item.id}>{item.name}</li>
-						<button onClick={() => handleRemove(item.id)}>-</button>
-					</React.Fragment>
-				)
-			}
-			</ul>
+			<div className="name-list-wrapper">
+				<h3 className="name-list-title">Name List</h3>
+
+				<div className="name-list-inputs-container">
+					<input type="text" name="name" value={name} onChange={(e) => setName(e.target.value)}></input>
+					<button className="btn btn-primary btn-block counter-add-name" onClick={handleAdd}>Add</button>
+				</div>
+				
+				<ul className="name-list-names-container">
+				{
+					nameList && nameList.map(item => 
+						<React.Fragment>
+							<li className="name-list-item" key={item.id}>{item.name}
+								<span className="name-list-remove" onClick={() => handleRemove(item.id)}>&times;</span>
+							</li>
+						</React.Fragment>
+					)
+				}
+				</ul>
+			</div>
 		</div>
 	);
 }

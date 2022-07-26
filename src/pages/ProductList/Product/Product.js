@@ -20,11 +20,11 @@ const Product = ({product}) => {
 
     return (
 
-        <div className="container-product-container">
+        <div className="product-container">
             <img className="image-product-container" src={product.ThumbnailURL} alt={product.Name}/>
-            <div className="container-name-prices">
+            <div className="name-prices-container">
                 <div className="product-name" id="product">{product.Name}</div>                
-                <div className="container-prices">
+                <div className="prices-container">
                     <div className="price-normal">${product.Price}</div>
                     {isShow ?
                         <div className="price-retail">${product["Retail Price"]}</div>

@@ -22,16 +22,16 @@ function ProductDetail(state) {
 
     return (
 
-        <div className="container-product-detail">
+        <div className="product-detail-container">
 
             <img className="image-product-container" src={product.ThumbnailURL} alt={product.Name}/>
 
-            <div className="container-name-prices">
-                <div className="container-product-name-description">
+            <div className="name-prices-container">
+                <div className="product-name-description-container">
                     <div className="product-name" id="product">{product.Name}</div>        
                     <div className="product-description" id="product-description">{product.Description}</div>                      
                 </div>
-                <div className="container-prices">
+                <div className="prices-container">
                         <div className="price-normal">${product.Price}</div>
                         {isShow ?
                             <div className="price-retail">${product["Retail Price"]}</div>
