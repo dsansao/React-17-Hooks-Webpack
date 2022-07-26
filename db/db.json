@@ -1,5 +1,5 @@
 {
-  "users": 
+  "users": [
     {
       "id": 1,
       "username": "admin",
@@ -8,7 +8,8 @@
       "password": "admin",
       "role": "ADMIN",
       "accessToken": "eyJhbGciOiJIUzI1NiJ9.eyJSb2xlIjoiQWRtaW4iLCJJc3N1ZXIiOiJBZG1pbiIsIlVzZXJuYW1lIjoiQWRtaW4iLCJleHAiOjE2NTYxNTI1NTAsImlhdCI6MTY1NjE1MjU1MH0.eJfhhim7i1y-PNt-ZqEbdmlzt5RYhLGU_gcXy8O3C_k"
-    },
+    }
+  ],
   "products": [
     {
       "ProductID": 7631,

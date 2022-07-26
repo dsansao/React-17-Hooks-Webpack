@@ -2,11 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
 import App from './App';
-import { GoogleAuthProvider } from './services/GoogleAuthService';
 
 ReactDOM.render(
-  <GoogleAuthProvider>
+  <React.Fragment>
     <App />
-  </GoogleAuthProvider>,
+  </React.Fragment>,
   document.getElementById('root')
 );

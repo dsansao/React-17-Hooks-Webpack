@@ -47,8 +47,8 @@ const NameList = () => {
 				<ul className="name-list-names-container">
 				{
 					nameList && nameList.map(item => 
-						<React.Fragment>
-							<li className="name-list-item" key={item.id}>{item.name}
+						<React.Fragment key={item.id}>
+							<li className="name-list-item">{item.name}
 								<span className="name-list-remove" onClick={() => handleRemove(item.id)}>&times;</span>
 							</li>
 						</React.Fragment>

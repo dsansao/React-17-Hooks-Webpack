@@ -3,9 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Form from 'react-validation/build/form';
 import Input from 'react-validation/build/input';
 import CheckButton from 'react-validation/build/button';
-import LoginGoogleButton from './../../components/LoginGoogleButton/LoginGoogleButton';
 import AuthService from './../../services/LoginAuthService';
-import { useGoogleAuth } from "./../../services/GoogleAuthService";
 
 import './login.scss';
 
@@ -22,7 +20,7 @@ const required = (value) => {
 const Login = () => {
   
   let navigate = useNavigate();
-  const isSignedIn = useGoogleAuth().isSignedIn || AuthService.isLogged();
+  const isSignedIn = AuthService.isLogged();
   const form = useRef();
   const checkBtn = useRef();
   const [username, setUsername] = useState("");
@@ -114,8 +112,7 @@ const Login = () => {
                 <span className="spinner-border spinner-border-sm"></span>
               )}
               <span>Login</span>
-            </button>
-            <LoginGoogleButton className="login-google-button"/>
+            </button>            
           </div>
           <CheckButton style={{ display: "none" }} ref={checkBtn} /> 
         </Form>

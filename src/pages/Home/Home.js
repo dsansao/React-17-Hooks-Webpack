@@ -6,9 +6,7 @@ const Home = () => {
 
     return (
         <section id="home">
-
             <div className="home-container">
-
                 <div className="home-card">
 
                     <h3 className="home-card-title">Home</h3>
@@ -20,12 +18,8 @@ const Home = () => {
                     <p>
                         TODO MORE!
                     </p>
-
                 </div>
-
-
             </div>
-
         </section>
     );
 }

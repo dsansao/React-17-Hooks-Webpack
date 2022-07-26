@@ -21,6 +21,15 @@ const Nav = () => {
                     <li className="nav-bar-container-item">
                         <Link className="nav-bar-container-item-name-list" to="/name-list">Name List</Link>
                     </li>
+                    <li className="nav-bar-container-item">
+                        <Link className="nav-bar-container-item-use-ref" to="/use-ref">Use Ref</Link>
+                    </li>
+                    <li className="nav-bar-container-item">
+                        <Link className="nav-bar-container-item-use-callback" to="/use-callback">Use Callback</Link>
+                    </li>
+                    <li className="nav-bar-container-item">
+                        <Link className="nav-bar-container-item-use-memo" to="/use-memo">Use Memo</Link>
+                    </li>
                     <li className="nav-bar-logout-button nav-bar-container-item">
                         <LogoutButton />
                     </li>
