@@ -4,7 +4,7 @@ import './red.scss';
 const Red = ({ addClass, children }) => {    
 
     return (
-        <span className={ `${addClass} red`}>{ children }</span>
+        <span className={ `${addClass ? addClass : ''} red`}>{ children }</span>
     );
 }  
 

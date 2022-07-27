@@ -1,2 +1,54 @@
 .use-ref-container {
+    display: flex;
+    justify-content: center;
+
+    .use-ref-wrapper {
+        display: flex;
+        align-items: center;
+        margin: 200px;
+        flex-direction: column;
+
+        .use-ref-title {
+            margin: 20px;
+            font-size: 20px;
+            font-family: sans-serif;
+            font-weight: 700;
+            color: #973c3c;
+        }
+
+        .use-ref-subtitle {
+            margin: 20px;
+            font-size: 18px;
+            font-family: sans-serif;
+            font-weight: 500;
+            color: #bb4c4c;
+        }
+
+        .use-ref-focus-container {
+            display: flex;
+            align-items: center;
+
+            .use-ref-focus {
+                margin-left: 10px;
+            }
+        }
+
+        .use-ref-counter-container {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .use-ref-add {
+                margin-right: 10px;
+            }
+
+            .use-ref-quantity {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                margin-bottom: 10px;
+            }
+        }
+    }
 }
